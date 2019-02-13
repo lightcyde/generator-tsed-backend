@@ -1,0 +1,9 @@
+{
+  "generator-node": {
+    "promptValues": {
+      "authorName": "Michael Rieger | Vortech Digital Pioneers",
+      "authorEmail": "mrieger@vortech.io",
+      "authorUrl": "http://vortech.io"
+    }
+  }
+}
