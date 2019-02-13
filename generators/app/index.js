@@ -7,15 +7,14 @@ module.exports = class extends Generator {
   prompting() {
     // Have Yeoman greet the user.
     this.log(
-      yosay(`Welcome to the stylish ${chalk.red('generator-tsed-backend')} generator!`)
+      yosay(`Welcome to the stylish ${chalk.red('Ts.ED backend')} generator!\n
+        I will create a nice backend project for you! 🤖`)
     );
 
     const prompts = [
       {
-        type: 'confirm',
-        name: 'someAnswer',
-        message: 'Would you like to enable this option?',
-        default: true
+        name: 'appName',
+        message: 'What name should we give your backend? 🤔'
       }
     ];
 
@@ -26,10 +25,13 @@ module.exports = class extends Generator {
   }
 
   writing() {
-    this.fs.copy(
-      this.templatePath('dummyfile.txt'),
-      this.destinationPath('dummyfile.txt')
-    );
+    this.fs.copy(this.templatePath(), this.destinationPath());
+    this.fs.copy(this.templatePath('_gitignore'), this.destinationPath('.gitignore'));
+    this.fs.copy(this.templatePath('_nycrc'), this.destinationPath('.nycrc'));
+    this.fs.copy(this.templatePath('src/services/_gitkeep'), this.destinationPath('src/services/.gitkeep'));
+    this.fs.delete(this.destinationPath('_gitignore'));
+    this.fs.delete(this.destinationPath('_nycrc'));
+    this.fs.delete(this.destinationPath('src/services/_gitkeep'));
   }
 
   install() {

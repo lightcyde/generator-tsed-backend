@@ -1,8 +1,12 @@
 {
   "name": "generator-tsed-backend",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Project generator for backend using express.js, Ts.ED and mocha and chai for testing",
   "homepage": "https://github.com/vortech-digital-pioneers/generator-tsed-backend",
+  "scripts": {
+    "pretest": "eslint .",
+    "test": "jest"
+  },
   "author": {
     "name": "Michael Rieger | Vortech Digital Pioneers",
     "email": "mrieger@vortech.io",
@@ -17,9 +21,17 @@
     "tsed",
     "backend",
     "mocha",
-    "chainode",
+    "chai",
+    "node",
     "yeoman-generator"
   ],
+  "dependencies": {
+    "chalk": "^2.1.0",
+    "mkdirp": "^0.5.1",
+    "mout": "^1.1.0",
+    "yeoman-generator": "^2.0.1",
+    "yosay": "^2.0.1"
+  },
   "devDependencies": {
     "yeoman-test": "^1.7.0",
     "yeoman-assert": "^3.1.0",
@@ -34,11 +46,6 @@
   },
   "engines": {
     "npm": ">= 4.0.0"
-  },
-  "dependencies": {
-    "yeoman-generator": "^2.0.1",
-    "chalk": "^2.1.0",
-    "yosay": "^2.0.1"
   },
   "jest": {
     "testEnvironment": "node"
@@ -69,9 +76,13 @@
       "prettier"
     ]
   },
-  "scripts": {
-    "pretest": "eslint .",
-    "test": "jest"
+  "prettier": {
+    "singleQuote": true,
+    "bracketSpacing": true,
+    "endOfLine": "lf",
+    "printWidth": 140,
+    "semi": true,
+    "proseWrap": "preserve"
   },
   "repository": "https://github.com/vortech-digital-pioneers/create-tsed-backend.git",
   "license": "MIT"
