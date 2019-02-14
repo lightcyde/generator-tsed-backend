@@ -45,7 +45,6 @@ module.exports = class extends Generator {
   writing() {
     if (this.options.appName) {
       this.props.appName = this.options.appName;
-      console.log(this.props.appName);
     }
 
     // Copy default content
@@ -90,6 +89,6 @@ module.exports = class extends Generator {
   }
 
   install() {
-    this.installDependencies({ yarn: false, bower: false }).catch(() => this.log('npm install failed!'));
+    this.spawnCommand('npm', ['install', '--prefix', this.destinationPath(this.props.appName)]);
   }
 };

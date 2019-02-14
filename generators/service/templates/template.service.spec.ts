@@ -7,21 +7,21 @@ describe('<%= serviceNamePascal %>Service', () => {
 
   describe('without IOC', () => {
     before(() => {
-      this.<%= serviceName %>Service = new <%= serviceNamePascal %>Service();
+      this.<%= serviceNameCamel %>Service = new <%= serviceNamePascal %>Service();
     });
 
     it('should do something', () => {
-      expect(this.<%= serviceName %>Service).to.be.an.instanceof(<%= serviceNamePascal %>Service);
+      expect(this.<%= serviceNameCamel %>Service).to.be.an.instanceof(<%= serviceNamePascal %>Service);
     });
   });
 
   describe('with inject()', () => {
-    before(inject([<%= serviceNamePascal %>Service], (<%= serviceName %>Service: <%= serviceNamePascal %>Service) => {
-      this.<%= serviceName %>Service = <%= serviceName %>Service;
+    before(inject([<%= serviceNamePascal %>Service], (<%= serviceNameCamel %>Service: <%= serviceNamePascal %>Service) => {
+      this.<%= serviceNameCamel %>Service = <%= serviceNameCamel %>Service;
     }));
 
     it('should get the service from the inject method', () => {
-      expect(this.<%= serviceName %>Service).to.be.an.instanceof(<%= serviceNamePascal %>Service);
+      expect(this.<%= serviceNameCamel %>Service).to.be.an.instanceof(<%= serviceNamePascal %>Service);
     });
   });
 
@@ -29,11 +29,11 @@ describe('<%= serviceNamePascal %>Service', () => {
     before(inject([InjectorService], (injectorService: InjectorService) => {
       const locals = new Map<any, any>();
 
-      this.<%= serviceName %>Service = injectorService.invoke<<%= serviceNamePascal %>Service>(<%= serviceNamePascal %>Service, locals);
+      this.<%= serviceNameCamel %>Service = injectorService.invoke<<%= serviceNamePascal %>Service>(<%= serviceNamePascal %>Service, locals);
     }));
 
     it('should get the service from InjectorService', () => {
-      expect(this.<%= serviceName %>Service).to.be.an.instanceof(<%= serviceNamePascal %>Service);
+      expect(this.<%= serviceNameCamel %>Service).to.be.an.instanceof(<%= serviceNamePascal %>Service);
     });
 
   });

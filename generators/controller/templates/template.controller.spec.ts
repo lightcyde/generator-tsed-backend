@@ -7,11 +7,11 @@ describe('<%= controllerNamePascal %>Controller', () => {
 
   describe('without IOC', () => {
     before(() => {
-      this.<%= controllerName %>Controller = new <%= controllerNamePascal %>Controller();
+      this.<%= controllerNameCamel %>Controller = new <%= controllerNamePascal %>Controller();
     });
 
     it('should exist', () => {
-      expect(this.<%= controllerName %>Controller).to.be.an.instanceof(<%= controllerNamePascal %>Controller);
+      expect(this.<%= controllerNameCamel %>Controller).to.be.an.instanceof(<%= controllerNamePascal %>Controller);
     });
   });
 
