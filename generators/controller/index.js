@@ -7,15 +7,12 @@ const stringUtils = require('mout/string');
 module.exports = class extends Generator {
   prompting() {
     // Have Yeoman greet the user.
-    this.log(
-      yosay(`Welcome to the awe-inspiring ${chalk.red('generator-tsed-backend')} generator!\n
-      This will generate a new controller for your backend! 🕹`)
-    );
+    this.log(this.log(yosay(`Let's generate a new ${chalk.blue('controller')}!`)));
 
     const prompts = [
       {
         name: 'controllerName',
-        message: 'What should be the name of the new controller? (without the word controller)'
+        message: 'What should be the name of the new controller? (without the word controller) 🕹'
       }
     ];
 
@@ -47,9 +44,5 @@ module.exports = class extends Generator {
         controllerNamePascal: this.props.controllerNamePascal
       }
     );
-  }
-
-  install() {
-    this.installDependencies();
   }
 };

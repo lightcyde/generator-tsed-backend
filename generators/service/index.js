@@ -7,12 +7,12 @@ const stringUtils = require('mout/string');
 module.exports = class extends Generator {
   prompting() {
     // Have Yeoman greet the user.
-    this.log(yosay(`Welcome to the impressive ${chalk.red('generator-tsed-backend')} generator!`));
+    this.log(yosay(`Let's generate a new ${chalk.blue('service')}!`));
 
     const prompts = [
       {
         name: 'serviceName',
-        message: 'What should be the name of the new service?'
+        message: 'What should be the name of the new service? (without the word service) ⚙️'
       }
     ];
 
@@ -44,9 +44,5 @@ module.exports = class extends Generator {
         serviceNamePascal: this.props.serviceNamePascal
       }
     );
-  }
-
-  install() {
-    this.installDependencies();
   }
 };

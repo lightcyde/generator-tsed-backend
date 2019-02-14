@@ -83,6 +83,6 @@
     "semi": true,
     "proseWrap": "preserve"
   },
-  "repository": "https://github.com/vortech-digital-pioneers/create-tsed-backend.git",
+  "repository": "https://github.com/vortech-digital-pioneers/generator-tsed-backend.git",
   "license": "MIT"
 }
