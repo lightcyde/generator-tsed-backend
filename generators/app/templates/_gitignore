@@ -1,18 +1,12 @@
-node_modules/
-bower_components/
-*.log
-
-build/
-dist/
-
-# Created by https://www.gitignore.io/api/node,linux,macos,windows,phpstorm+all,webstorm+all,jetbrains+all,yeoman
-# Edit at https://www.gitignore.io/?templates=node,linux,macos,windows,phpstorm+all,webstorm+all,jetbrains+all,yeoman
+# Created by https://www.gitignore.io/api/node,linux,macos,windows,phpstorm+all,webstorm+all,jetbrains+all
+# Edit at https://www.gitignore.io/?templates=node,linux,macos,windows,phpstorm+all,webstorm+all,jetbrains+all
 
 ### JetBrains+all ###
 # Covers JetBrains IDEs: IntelliJ, RubyMine, PhpStorm, AppCode, PyCharm, CLion, Android Studio and WebStorm
 # Reference: https://intellij-support.jetbrains.com/hc/en-us/articles/206544839
 
 # User-specific stuff
+.idea  
 .idea/**/workspace.xml
 .idea/**/tasks.xml
 .idea/**/usage.statistics.xml
@@ -342,10 +336,7 @@ $RECYCLE.BIN/
 # Windows shortcuts
 *.lnk
 
-### Yeoman ###
-bower_components/
-
-build/
+# TypeScript
 dist/
 
-# End of https://www.gitignore.io/api/node,linux,macos,windows,phpstorm+all,webstorm+all,jetbrains+all,yeoman
+# End of https://www.gitignore.io/api/node,linux,macos,windows,phpstorm+all,webstorm+all,jetbrains+all

@@ -1,0 +1,88 @@
+{
+  "name": "generator-tsed-backend",
+  "version": "1.0.0",
+  "description": "Project generator for backend using express.js, Ts.ED and mocha and chai for testing",
+  "homepage": "https://github.com/vortech-digital-pioneers/generator-tsed-backend",
+  "scripts": {
+    "pretest": "eslint .",
+    "test": "jest"
+  },
+  "author": {
+    "name": "Michael Rieger | Vortech Digital Pioneers",
+    "email": "mrieger@vortech.io",
+    "url": "http://vortech.io"
+  },
+  "files": [
+    "generators"
+  ],
+  "main": "generators/index.js",
+  "keywords": [
+    "expressjs",
+    "tsed",
+    "backend",
+    "mocha",
+    "chai",
+    "node",
+    "yeoman-generator"
+  ],
+  "dependencies": {
+    "chalk": "^2.1.0",
+    "mout": "^1.1.0",
+    "yeoman-generator": "^2.0.1",
+    "yosay": "^2.0.1"
+  },
+  "devDependencies": {
+    "yeoman-test": "^1.7.0",
+    "yeoman-assert": "^3.1.0",
+    "eslint": "^5.9.0",
+    "prettier": "^1.15.2",
+    "husky": "^1.2.0",
+    "lint-staged": "^8.1.0",
+    "eslint-config-prettier": "^3.3.0",
+    "eslint-plugin-prettier": "^3.0.0",
+    "eslint-config-xo": "^0.25.0",
+    "jest": "^23.5.0"
+  },
+  "engines": {
+    "npm": ">= 4.0.0"
+  },
+  "jest": {
+    "testEnvironment": "node"
+  },
+  "lint-staged": {
+    "*.js": [
+      "eslint --fix",
+      "git add"
+    ],
+    "*.json": [
+      "prettier --write",
+      "git add"
+    ]
+  },
+  "eslintConfig": {
+    "extends": [
+      "xo",
+      "prettier"
+    ],
+    "env": {
+      "jest": true,
+      "node": true
+    },
+    "rules": {
+      "prettier/prettier": "error"
+    },
+    "plugins": [
+      "prettier"
+    ]
+  },
+  "prettier": {
+    "singleQuote": true,
+    "bracketSpacing": true,
+    "endOfLine": "lf",
+    "printWidth": 140,
+    "semi": true,
+    "proseWrap": "preserve"
+  },
+  "repository": "https://github.com/vortech-digital-pioneers/generator-tsed-backend.git",
+  "license": "MIT"
+}
