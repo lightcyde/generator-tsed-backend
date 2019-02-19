@@ -33,7 +33,7 @@ with the initial configuration:
 
 - **<url>/rest** - lists all endpoints
 - **<url>/hello** - prints 'Hello World!' and shows basic usage of controllers and unit tests (template.controller.spec.ts)
-- **<url>/api-docs/swagger.json** - a documentation of all endpoints in **json** format
+- **<url>/api-docs/swagger.json** - a documentation of all endpoints in **json** format (available when stuff is documented)
 - **<url>/api-docs** - a HTML representation of the endpoint documentation
 
 ## Testing

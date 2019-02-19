@@ -1,17 +1,13 @@
 {
-  "name": "generator-tsed-backend",
-  "version": "1.0.0",
+  "name": "@vortech-digital-pioneers/generator-tsed-backend",
+  "version": "1.0.1",
   "description": "Project generator for backend using express.js, Ts.ED and mocha and chai for testing",
   "homepage": "https://github.com/vortech-digital-pioneers/generator-tsed-backend",
   "scripts": {
     "pretest": "eslint .",
     "test": "jest"
   },
-  "author": {
-    "name": "Michael Rieger | Vortech Digital Pioneers",
-    "email": "mrieger@vortech.io",
-    "url": "http://vortech.io"
-  },
+  "author": "Michael Rieger | Vortech Digital Pioneers <mrieger@vortech.io> (http://vortech.io)",
   "files": [
     "generators"
   ],
@@ -83,6 +79,12 @@
     "semi": true,
     "proseWrap": "preserve"
   },
-  "repository": "https://github.com/vortech-digital-pioneers/generator-tsed-backend.git",
-  "license": "MIT"
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vortech-digital-pioneers/generator-tsed-backend.git"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/vortech-digital-pioneers/generator-tsed-backend/issues"
+  }
 }

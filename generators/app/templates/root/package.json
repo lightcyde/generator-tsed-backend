@@ -1,5 +1,5 @@
 {
-  "name": "env-node-backend-base",
+  "name": "tsed-backend-base",
   "version": "1.0.0",
   "description": "Base project to create TypeScript-based Node.js backend applications.",
   "main": "src/index.js",
