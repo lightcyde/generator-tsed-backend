@@ -10,6 +10,8 @@ module.exports = class extends Generator {
     this.argument('appName', { type: String, required: false });
     // This method adds support for a `--demo` flag
     this.option('demo', { type: Boolean, required: false });
+    // This method adds support for a `--no-demo` flag
+    this.option('noDemo', { type: Boolean, required: false });
   }
 
   prompting() {
@@ -27,12 +29,12 @@ module.exports = class extends Generator {
       });
     }
 
-    if (!this.options.demo) {
+    if (this.options.demo === undefined || this.options.noDemo === undefined) {
       prompts.push({
         type: 'confirm',
         name: 'addDemoContent',
         message: 'Would you like to generate demo content? 📝',
-        default: true
+        default: false
       });
     }
 
@@ -77,7 +79,12 @@ module.exports = class extends Generator {
     );
 
     // Copy demo content if desired
-    if (this.options.demo) {
+    if (
+      (this.options.demo !== undefined && this.options.demo) ||
+      (this.options.demo !== undefined && !this.options.noDemo) ||
+      this.props.addDemoContent
+    ) {
+      console.log('CREATING DEMO CONTENT');
       this.fs.copy(this.templatePath('src/controllers/hello'), this.destinationPath(this.props.appName + '/src/controllers/hello'));
       this.fs.copy(this.templatePath('src/services/hello'), this.destinationPath(this.props.appName + '/src/services/hello'));
       this.fs.copy(
