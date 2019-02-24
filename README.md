@@ -1,5 +1,10 @@
 # Ts.ED backend generator
 
+_Mirror of **@vortech-digital-pioneers/generator-tsed-backend**, since scoped packages are not
+yet being supported by yeoman's registry as well as the offline interpreter. The original scoped
+package will be updated when support for scoped packages is given by yeoman, until this happens,
+be welcomed right here, where you stand._
+
 Generates a new backend project including express, Ts.ED, mocha and chai.
 
 ## Installation
@@ -9,7 +14,7 @@ pre-installed node.js).
 
 ```
 npm install -g yo
-npm install -g @vortech-digital-pioneers/generator-tsed-backend
+npm install -g generator-tsed-backend
 ```
 
 ## Usage
@@ -36,7 +41,7 @@ yo tsed-backend:controller [controllerName]
 Generate a new service:
 
 ```
-yo tsed-backend:service [controllerName]
+yo tsed-backend:service [serviceName]
 ```
 
 
