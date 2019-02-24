@@ -41,7 +41,7 @@ yo tsed-backend:controller [controllerName]
 Generate a new service:
 
 ```
-yo tsed-backend:service [controllerName]
+yo tsed-backend:service [serviceName]
 ```
 
 
