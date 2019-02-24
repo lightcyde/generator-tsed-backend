@@ -22,8 +22,8 @@ try {
 }
 
 export class Config {
-  public static readonly httpPort: number = json === undefined ? 8081 : json.http_port || 8081;
-  public static readonly httpsPort: number = json === undefined ? 8091 : json.https_port || 8091;
+  public static readonly httpPort: number = json === undefined ? 8090 : json.http_port || 8090;
+  public static readonly httpsPort: number = json === undefined ? 8443 : json.https_port || 8443;
   public static readonly privateKeyPath: string = json === undefined ? '' : json.private_key_path || '';
   public static readonly sslCertPath: string = json === undefined ? '' : json.ssl_cert_path || '';
   public static readonly passPhrase: string = json === undefined ? '' : json.pass_phrase || '';
