@@ -1,9 +1,8 @@
 module.exports = {
-  apps : [{
+  apps: [{
     name: '<<name>>',
-    cwd: '<<working directory>>',
-    script: 'out/server.js',
-    args: 'server.configuration.json',
+    script: 'dist/server.js',
+    args: 'server.config.json',
     output: './logs/out-log.json',
     error: './logs/error-log.json',
     log_type: 'json',
@@ -12,6 +11,6 @@ module.exports = {
     autorestart: true,
     watch: true,
     ignore_watch: 'logs',
-    max_memory_restart: '0.5G'
+    max_memory_restart: '512M'
   }]
 };
