@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/vortech-digital-pioneers/generator-tsed-backend.svg?branch=master)](https://travis-ci.org/vortech-digital-pioneers/generator-tsed-backend)
+
 # Ts.ED backend generator
 
 _Mirror of **@vortech-digital-pioneers/generator-tsed-backend**, since scoped packages are not
