@@ -1,9 +1,9 @@
 language: node_js
 node_js:
-- v11
-- v10
-- v8
-- v6
+  - v11
+  - v10
+  - v8
+  - v6
 deploy:
   provider: npm
   email: mrieger@vortech.io
@@ -13,3 +13,5 @@ deploy:
     repo: vortech-digital-pioneers/generator-tsed-backend
     branch: master
     skip_cleanup: true
+notifications:
+  webhooks: $TEAMS_URL
