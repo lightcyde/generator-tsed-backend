@@ -23,8 +23,10 @@
     "start": "ts-node src/index.ts ./server.config.json",
     "predeploy": "npm run build",
     "deploy": "rsync -avz -e \"ssh -i $npm_package_config_keyfile\" dist $npm_package_config_user@$npm_package_config_server:$npm_package_config_deployPath",
-    "postdeploy": "rsync -avz -e \"ssh -i $npm_package_config_keyfile\" package.json $npm_package_config_user@$npm_package_config_server:$npm_package_config_deployPath",
-    "deploy:config": "rsync -avz -e \"ssh -i $npm_package_config_keyfile\" server.config.json $npm_package_config_user@$npm_package_config_server:$npm_package_config_deployPath"
+    "postdeploy": "npm run deploy:packageJson && npm run deploy:config && npm run deploy:pm2config",
+    "deploy:packageJson": "rsync -avz -e \"ssh -i $npm_package_config_keyfile\" package.json $npm_package_config_user@$npm_package_config_server:$npm_package_config_deployPath",
+    "deploy:config": "rsync -avz -e \"ssh -i $npm_package_config_keyfile\" server.config.json $npm_package_config_user@$npm_package_config_server:$npm_package_config_deployPath",
+    "deploy:pm2config": "rsync -avz -e \"ssh -i $npm_package_config_keyfile\" ecosystem.config.js $npm_package_config_user@$npm_package_config_server:$npm_package_config_deployPath"
   },
   "private": true,
   "author": "",

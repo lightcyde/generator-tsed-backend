@@ -64,6 +64,33 @@ The default version of this file is the following:
 
 Be sure to adapt this file to your means and provide the necessary information when configuring HTTPS support.
 
+##Preparing the Server
+```
+chmod 400 ~/.ssh/sshkey.pem
+ssh -i ~/.ssh/sshkey.pem user@server
+sudo apt update
+sudo apt install nodejs npm
+sudo npm install pm2 -g
+sudo apt-get update
+sudo apt-get install software-properties-common
+sudo add-apt-repository universe
+sudo add-apt-repository ppa:certbot/certbot
+sudo apt-get update
+sudo apt-get install certbot
+sudo certbot certonly
+sudo certbot renew --dry-run
+sudo pm2 startup
+```
+
+DEPLOY using npm:  ```npm run deploy```
+
+```
+cd backend
+npm install --only=production
+sudo pkill PM2
+sudo pm2 start
+```
+
 ## Deployment
 
 Deployment to the server is currently done by simply copying everything of relevance to the wanted server.
