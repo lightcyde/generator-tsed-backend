@@ -10,7 +10,7 @@ module.exports = class extends Generator {
     this.argument('appName', { type: String, required: false });
     // This method adds support for a `--demo` flag
     this.option('demo', { type: Boolean, required: false });
-    // This method adds support for a `--no-demo` flag
+    // This method adds support for a `--noDemo` flag
     this.option('noDemo', { type: Boolean, required: false });
   }
 
@@ -29,7 +29,7 @@ module.exports = class extends Generator {
       });
     }
 
-    if (this.options.demo === undefined || this.options.noDemo === undefined) {
+    if (this.options.demo === undefined && this.options.noDemo === undefined) {
       prompts.push({
         type: 'confirm',
         name: 'addDemoContent',
@@ -58,7 +58,6 @@ module.exports = class extends Generator {
     this.fs.copy(this.templatePath('spec/'), this.destinationPath(this.props.appName + '/spec'));
 
     // Src root content
-    this.fs.copy(this.templatePath('src/index.ts'), this.destinationPath(this.props.appName + '/src/index.ts'));
     this.fs.copy(this.templatePath('src/server.ts'), this.destinationPath(this.props.appName + '/src/server.ts'));
     this.fs.copy(this.templatePath('src/config'), this.destinationPath(this.props.appName + '/src/config'));
 

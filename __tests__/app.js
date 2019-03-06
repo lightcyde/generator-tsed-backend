@@ -20,7 +20,6 @@ describe('generator-tsed-backend:app-without-demo-content-prompt', () => {
     assert.noFile(['testApp/src/services/_gitkeep']);
     assert.noFile(['testApp/src/services/hello/hello.service.ts']);
     assert.noFile(['testApp/src/services/hello/hello.service.spec.ts']);
-    assert.file(['testApp/src/index.ts']);
     assert.file(['testApp/src/server.ts']);
     assert.file(['testApp/test/mocha.opts']);
     assert.file(['testApp/.gitignore']);
@@ -54,7 +53,6 @@ describe('generator-tsed-backend:app-with-demo-content-prompt', () => {
     assert.file(['testApp/src/services/hello/hello.service.ts']);
     assert.file(['testApp/src/services/hello/hello.service.spec.ts']);
     assert.noFile(['testApp/src/services/_gitkeep']);
-    assert.file(['testApp/src/index.ts']);
     assert.file(['testApp/src/server.ts']);
     assert.file(['testApp/test/mocha.opts']);
     assert.file(['testApp/.gitignore']);
@@ -88,7 +86,6 @@ describe('generator-tsed-backend:app-without-demo-content-argument', () => {
     assert.noFile(['testApp/src/services/_gitkeep']);
     assert.noFile(['testApp/src/services/hello/hello.service.ts']);
     assert.noFile(['testApp/src/services/hello/hello.service.spec.s']);
-    assert.file(['testApp/src/index.ts']);
     assert.file(['testApp/src/server.ts']);
     assert.file(['testApp/test/mocha.opts']);
     assert.file(['testApp/.gitignore']);
@@ -122,7 +119,6 @@ describe('generator-tsed-backend:app-with-demo-argument', () => {
     assert.noFile(['testApp/src/services/_gitkeep']);
     assert.file(['testApp/src/services/hello/hello.service.ts']);
     assert.file(['testApp/src/services/hello/hello.service.spec.ts']);
-    assert.file(['testApp/src/index.ts']);
     assert.file(['testApp/src/server.ts']);
     assert.file(['testApp/test/mocha.opts']);
     assert.file(['testApp/.gitignore']);

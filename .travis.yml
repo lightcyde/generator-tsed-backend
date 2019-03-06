@@ -1,7 +1,15 @@
 language: node_js
 node_js:
-  - v11
-  - v10
-  - v8
-  - v6
-  - v4
+- v11
+- v10
+- v8
+- v6
+deploy:
+  provider: npm
+  email: mrieger@vortech.io
+  api_key: $NPM_TOKEN
+  on:
+    tags: true
+    repo: vortech-digital-pioneers/generator-tsed-backend
+    branch: master
+    skip_cleanup: true
