@@ -2,7 +2,7 @@ module.exports = {
   apps: [{
     name: '<<name>>',
     script: 'dist/server.js',
-    args: '--config=server.configuration.json --mode=prod',
+    args: '--config=server.config.json --mode=prod',
     output: './logs/out-log.json',
     error: './logs/error-log.json',
     log_type: 'json',
