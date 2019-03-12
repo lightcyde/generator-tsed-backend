@@ -33,6 +33,8 @@ Arguments are used for the following:
   - the folder containing the files will also be called like this
 - **--demo**
   - specifies if demo content (controller/service) should be generated when starting the project
+- **--noDemo**
+  - specifies that no demo content will be generated
 
 Generate a new controller:
 
