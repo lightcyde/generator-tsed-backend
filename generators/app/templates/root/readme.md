@@ -54,11 +54,20 @@ The default version of this file is the following:
 
 ```json
 {
-  "http_port": 8090,
-  "https_port": 8443,
-  "private_key_path": "",
-  "ssl_cert_path": "",
-  "passPhrase": ""
+  "dev": {
+    "http_port": 8090,
+    "https_port": 8443,
+    "private_key_path": "",
+    "ssl_cert_path": "",
+    "passPhrase": ""
+  },
+  "prod": {
+    "http_port": 8090,
+    "https_port": 8443,
+    "private_key_path": "",
+    "ssl_cert_path": "",
+    "passPhrase": ""
+  }
 }
 ```
 
@@ -87,7 +96,7 @@ DEPLOY using npm:  ```npm run deploy```
 ```
 cd backend
 npm install --only=production
-sudo pkill PM2
+sudo pm2 kill
 sudo pm2 start
 ```
 
