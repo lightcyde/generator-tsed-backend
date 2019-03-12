@@ -1,6 +1,6 @@
 {
   "name": "generator-tsed-backend",
-  "version": "1.0.2",
+  "version": "1.0.5",
   "description": "Project generator for backend using express.js, Ts.ED and mocha and chai for testing",
   "homepage": "https://github.com/vortech-digital-pioneers/generator-tsed-backend",
   "scripts": {
