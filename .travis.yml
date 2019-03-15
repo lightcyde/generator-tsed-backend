@@ -4,6 +4,10 @@ node_js:
   - v10
   - v8
   - v6
+branches:
+  only:
+    - master
+    - develop
 deploy:
   provider: npm
   email: mrieger@vortech.io
@@ -14,4 +18,5 @@ deploy:
     branch: master
     skip_cleanup: true
 notifications:
-  webhooks: $TEAMS_URL
+  webhooks:
+    - $TEAMS_URL
