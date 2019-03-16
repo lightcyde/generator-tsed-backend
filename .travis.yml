@@ -4,10 +4,6 @@ node_js:
   - v10
   - v8
   - v6
-branches:
-  only:
-    - master
-    - develop
 deploy:
   provider: npm
   email: mrieger@vortech.io
