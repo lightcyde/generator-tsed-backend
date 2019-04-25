@@ -17,9 +17,9 @@ const Helmet = require('helmet');
   httpPort: Config.httpPort,
   httpsPort: Config.httpsPort,
   httpsOptions: {
-    key: Config.privateKeyPath !== '' ? Fs.readFileSync(Config.privateKeyPath) : '',
+    key: Config.sslPrivateKeyPath !== '' ? Fs.readFileSync(Config.sslPrivateKeyPath) : '',
     cert: Config.sslCertPath !== '' ? Fs.readFileSync(Config.sslCertPath) : '',
-    passphrase: Config.passPhrase
+    passphrase: Config.sslPassPhrase
   },
   logger: {
     debug: true,
