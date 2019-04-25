@@ -29,12 +29,12 @@ if (arg2 === undefined) {
   }
 }
 
+let json: any = undefined;
 if (arg1 === undefined) {
   $log.warn('No server.config.json file found - using default values.');
   $log.warn('Consider providing one as first parameter using --config=[PATH]');
 } else {
   let configFilePath = arg1.slice(arg1.indexOf('=', 0) + 1, arg1.length);
-  var json: any = undefined;
   try {
     json = readJsonSync(configFilePath);
     switch (currentEnv) {
@@ -54,7 +54,7 @@ if (arg1 === undefined) {
 export class Config {
   public static readonly httpPort: number = json === undefined ? undefined : json.http_port || 8090;
   public static readonly httpsPort: number = json === undefined ? undefined : json.https_port || 8443;
-  public static readonly privateKeyPath: string = json === undefined ? undefined : json.private_key_path;
+  public static readonly sslPrivateKeyPath: string = json === undefined ? undefined : json.ssl_private_key_path;
   public static readonly sslCertPath: string = json === undefined ? undefined : json.ssl_cert_path;
-  public static readonly passPhrase: string = json === undefined ? undefined : json.pass_phrase;
+  public static readonly sslPassPhrase: string = json === undefined ? undefined : json.ssl_pass_phrase;
 }

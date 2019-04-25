@@ -57,16 +57,16 @@ The default version of this file is the following:
   "dev": {
     "http_port": 8090,
     "https_port": 8443,
-    "private_key_path": "",
+    "ssl_private_key_path": "",
     "ssl_cert_path": "",
-    "passPhrase": ""
+    "ssl_pass_phrase": ""
   },
   "prod": {
     "http_port": 8090,
     "https_port": 8443,
-    "private_key_path": "",
+    "ssl_private_key_path": "",
     "ssl_cert_path": "",
-    "passPhrase": ""
+    "ssl_pass_phrase": ""
   }
 }
 ```
